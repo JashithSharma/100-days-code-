@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int arr[300];
+    int sum = 0, expectedSum;
+
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements (numbers from 0 to %d, except one missing):\n", n, n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+
+    expectedSum = n * (n + 1) / 2;
+
+    printf("Missing number: %d\n", expectedSum - sum);
+
+    return 0;
+}
