@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    char date[20], result[20];
+    int i = 0, j = 0;
+
+    printf("Enter date in dd/04/yyyy format: ");
+    gets(date);
+
+    while(date[i] != '/' && date[i] != '\0') {
+        result[j] = date[i];
+        i++;
+        j++;
+    }
+
+    result[j] = '-';
+    j++;
+
+    result[j] = 'A';
+    result[j+1] = 'p';
+    result[j+2] = 'r';
+    j += 3;
+
+    i++;
+
+    result[j] = '-';
+    j++;
+
+    while(date[i] != '\0') {
+        result[j] = date[i];
+        i++;
+        j++;
+    }
+
+    result[j] = '\0';
+
+    printf("Converted date: %s\n", result);
+
+    return 0;
+}
