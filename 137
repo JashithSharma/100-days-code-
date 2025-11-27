@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+enum Role {
+    ADMIN = 1,
+    USER,
+    GUEST
+};
+
+int main() {
+    enum Role r;
+
+    r = ADMIN;
+    if(r == ADMIN)
+        printf("ADMIN: Full access granted.\n");
+
+    r = USER;
+    if(r == USER)
+        printf("USER: Limited access granted.\n");
+
+    r = GUEST;
+    if(r == GUEST)
+        printf("GUEST: Read-only access granted.\n");
+
+    return 0;
+}
