@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+enum Day {
+    SUNDAY,
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY
+};
+
+int main() {
+    enum Day d;
+
+    printf("Day and their integer values:\n");
+
+    d = SUNDAY;
+    printf("SUNDAY = %d\n", d);
+
+    d = MONDAY;
+    printf("MONDAY = %d\n", d);
+
+    d = TUESDAY;
+    printf("TUESDAY = %d\n", d);
+
+    d = WEDNESDAY;
+    printf("WEDNESDAY = %d\n", d);
+
+    d = THURSDAY;
+    printf("THURSDAY = %d\n", d);
+
+    d = FRIDAY;
+    printf("FRIDAY = %d\n", d);
+
+    d = SATURDAY;
+    printf("SATURDAY = %d\n", d);
+
+    return 0;
+}
