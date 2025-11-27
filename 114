@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    char s[300];
+    int last[256];
+    int i, start = 0, maxLen = 0, len = 0;
+    unsigned char ch;
+
+    printf("Enter a string: ");
+    gets(s);
+
+    for(i = 0; i < 256; i++) {
+        last[i] = -1;
+    }
+
+    i = 0;
+    while(s[i] != '\0') {
+        ch = (unsigned char)s[i];
+
+        if(last[ch] >= start) {
+            start = last[ch] + 1;
+        }
+
+        last[ch] = i;
+
+        len = i - start + 1;
+        if(len > maxLen) {
+            maxLen = len;
+        }
+
+        i++;
+    }
+
+    printf("%d\n", maxLen);
+
+    return 0;
+}
